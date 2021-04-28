@@ -1,0 +1,38 @@
+.top{
+    background-color: #000000;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 20px 15px 20px 15px;
+}
+.nav{
+    width: 70%;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.nav-list{
+    list-style: none;
+}
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    padding-top: 28px;
+    padding-left: 40px;
+    font-size: 20px;
+}
+.language-title{
+    margin: 0;
+    padding-right: 20px;
+}
