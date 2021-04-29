@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Dropdown, DropdownButton, NavDropdown } from 'react-bootstrap';
+import { Button, Dropdown, DropdownButton, Form, NavDropdown } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import './Header.css'
+import kg from '../../../container/img/kg.png'
 
 function Header(props) {
     return (
@@ -31,7 +32,16 @@ function Header(props) {
                         </ul>
                     </nav>
                     <div className="language">
-                        <h6 className="language-title">Язык</h6>
+                        <Form>
+                            <Form.Group controlId="exampleForm.SelectCustom">
+                                <Form.Label>Язык</Form.Label>
+                                <Form.Control as="select" custom>
+                                    <option>kg</option>
+                                    <option>ru</option>
+                                    <option>uz</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
                     </div>
                     <div className="sign-in">
                         <Button>Sign in</Button>

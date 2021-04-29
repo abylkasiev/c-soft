@@ -1,9 +1,15 @@
 import React from 'react';
+import './Events.css'
+import {NavLink} from 'react-router-dom';
 
 function Events(props) {
     return (
-        <div>
-            Events
+        <div className="event">
+            <div className="container">
+                <NavLink to="/Createevents" exact className="btn btn-success" >
+                Создать мероприятие
+                </NavLink>
+            </div>
         </div>
     );
 }
