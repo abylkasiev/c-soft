@@ -1,11 +1,11 @@
 import React from 'react';
-import { DropdownButton, Dropdown, Button } from 'react-bootstrap';
+import { Button, Dropdown, DropdownButton, NavDropdown } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import './Header.css'
 
 function Header(props) {
     return (
-        <div className="top">
+        <div className="wrapper">
             <div className="container">
                 <div className="header">
                     <nav className="nav">
@@ -17,17 +17,21 @@ function Header(props) {
                                 <NavLink className="nav-link" to="/Users" exact>Пользователи</NavLink>
                             </li>
                             <li className="nav-list dropdown">
-                                <NavLink className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" exact>Сведения о денежных средствах</NavLink>
-                                <DropdownButton id="dropdown-basic-button" title="Сведения о денежных средствах">
-                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                </DropdownButton>
+                            <NavDropdown title="Сведения о денежных средствах" id="collasible-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.1">Приход</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">Расход</NavDropdown.Item>
+                                <NavDropdown.Divider/>
+                                <NavDropdown title="Отчёт" id="collasible-nav-dropdown" drop="right">
+                                    <NavDropdown.Item href="#action/3.1">Приход по мероприятиям</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Приход по мероприятиям</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Общий сведения по мероприятиям</NavDropdown.Item>
+                                </NavDropdown>
+                            </NavDropdown>
                             </li>
                         </ul>
                     </nav>
                     <div className="language">
-                        <h6 className="language-title text-light">Язык</h6>
+                        <h6 className="language-title">Язык</h6>
                     </div>
                     <div className="sign-in">
                         <Button>Sign in</Button>

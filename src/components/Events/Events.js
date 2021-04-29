@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Funds(props) {
+function Events(props) {
     return (
         <div>
-            
+            Events
         </div>
     );
 }
 
-export default Funds;
+export default Events;
