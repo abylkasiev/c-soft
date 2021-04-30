@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, Dropdown, DropdownButton, Form, NavDropdown } from 'react-bootstrap';
+import { Button, Form, Modal, NavDropdown } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import './Header.css'
-import kg from '../../../container/img/kg.png'
+import MyVerticallyCenteredModal from './Modal/MyVerticallyCenteredModal';
 
 function Header(props) {
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <div className="wrapper">
             <div className="container">
@@ -31,10 +32,22 @@ function Header(props) {
                             </li>
                         </ul>
                     </nav>
+                    <div className="sign-in">
+                        <>
+                            <Button variant="primary" onClick={() => setModalShow(true)}>
+                                Войти
+                            </Button>
+
+                            <MyVerticallyCenteredModal
+                                show={modalShow}
+                                onHide={() => setModalShow(false)}
+                            />
+                        </>
+                    </div>
                     <div className="language">
                         <Form>
-                            <Form.Group controlId="exampleForm.SelectCustom">
-                                <Form.Label>Язык</Form.Label>
+                            <Form.Group controlId="exampleForm.SelectCustom" className="form">
+                                <Form.Label className="label" >Язык</Form.Label>
                                 <Form.Control as="select" custom>
                                     <option>kg</option>
                                     <option>ru</option>
@@ -42,9 +55,6 @@ function Header(props) {
                                 </Form.Control>
                             </Form.Group>
                         </Form>
-                    </div>
-                    <div className="sign-in">
-                        <Button>Sign in</Button>
                     </div>
                 </div>
             </div>

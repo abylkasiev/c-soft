@@ -1,11 +1,35 @@
-import React from 'react';
+import * as actionTypes from '../actions/actionTypes'
 
-const eventReducer = (state, action) => {
-    return (
-        <div>
-            
-        </div>
-    );
+const initialState = {
+    events: {
+        name: '',
+        startTime: '',
+        endTime: ''
+    }
+}
+
+const eventReducer = (state = initialState, action) => {
+    switch(action.type) {
+        case actionTypes.ADD_EVENT:
+            return {
+                ...state,
+                events: {
+                    ...state.events,
+                    [action.eventName]: state.events[action.eventName] + 1
+                }
+            }
+
+        case actionTypes.REMOVE_EVENT:
+            return {
+                ...state,
+                events: {
+                    ...state.events,
+                    [action.eventName]: state.events[action.eventName] - 1
+                }
+            }
+
+        default: return state;
+    }
 };
 
 export default eventReducer;

@@ -35,9 +35,12 @@
     display: flex;
     align-self: center;
 }
-.language-title{
+.form{
+    display: flex;
+    align-items:center;
+}
+.label{
     margin: 0;
-    padding-right: 20px;
 }
 .dropdown-toggle.nav-link{
     padding-left: 1.5rem;
