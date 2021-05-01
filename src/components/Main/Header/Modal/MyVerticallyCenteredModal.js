@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 
 function MyVerticallyCenteredModal(props) {
+    
     return (
         <Modal
             {...props}
