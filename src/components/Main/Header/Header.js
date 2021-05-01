@@ -37,7 +37,7 @@ function Header(props) {
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    <div className="sign-in">
+                    {/* <div className="sign-in">
                         <>
                             <Button variant="primary" onClick={() => setModalShow(true)}>
                                 Войти
@@ -48,7 +48,7 @@ function Header(props) {
                                 onHide={() => setModalShow(false)}
                             />
                         </>
-                    </div>
+                    </div> */}
                     <div className="language">
                         <Form>
                             <Form.Group controlId="exampleForm.SelectCustom" className="form">

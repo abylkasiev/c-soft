@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, Switch } from 'react-router';
+import Auth from './components/Main/Header/Auth/Auth'
 import Header from './components/Main/Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Main/Footer/Footer';
@@ -10,6 +11,7 @@ import Createevents from './components/Events/Createevents/Createevents'
 function App() {
   return (
     <div className="App">
+      <Auth/>
         <Header/>
           <Switch>
             <Route  path="/Events" component={Events} />
