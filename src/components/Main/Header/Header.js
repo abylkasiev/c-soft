@@ -1,11 +1,9 @@
 import React from 'react';
-import { Button, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import './Header.css'
-import MyVerticallyCenteredModal from './Modal/MyVerticallyCenteredModal';
 
-function Header(props) {
-    const [modalShow, setModalShow] = React.useState(false);
+function Header() {
     return (
         <div className="wrapper">
             <div className="container">
@@ -37,18 +35,6 @@ function Header(props) {
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    {/* <div className="sign-in">
-                        <>
-                            <Button variant="primary" onClick={() => setModalShow(true)}>
-                                Войти
-                            </Button>
-
-                            <MyVerticallyCenteredModal
-                                show={modalShow}
-                                onHide={() => setModalShow(false)}
-                            />
-                        </>
-                    </div> */}
                     <div className="language">
                         <Form>
                             <Form.Group controlId="exampleForm.SelectCustom" className="form">

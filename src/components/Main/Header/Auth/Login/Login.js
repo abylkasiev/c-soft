@@ -19,20 +19,25 @@ const Login = (props) => {
     return (
         <section className="login">
             <div className="loginContainer">
-                <label>Username</label>
+                <h2 className="auth-title"></h2>
+                <label>Почта</label>
                 <input 
                     type="text" 
                     autoFocus 
                     required 
                     value={email}
+                    autocomplete="email" 
+                    placeholder="Электронный адрес"
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
-                <label>Password</label>
+                <label>Пароль</label>
                 <input 
                     type="password" 
                     autoFocus 
                     required 
+                    placeholder="Введите пароль"
+                    autocomplete="password" 
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
@@ -40,18 +45,18 @@ const Login = (props) => {
                 <div className="btnContainer">
                     {hasAccount ? (
                         <>
-                            <button onClick={handleLogin}>Sign in</button>
+                            <button onClick={handleLogin}>Войти</button>
                             <p>
-                                Don`t have an account ? 
-                                <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
+                                У вас ещё нет аккаунта ? 
+                                <span onClick={() => setHasAccount(!hasAccount)}>Зарегистрируйтесь</span>
                             </p>
                         </>
                     ) : (
                         <>
-                            <button onClick={handleSignup}>Sign up</button>
+                            <button onClick={handleSignup}>Зарегистрироваться</button>
                             <p>
-                                Have an account ? 
-                                <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span>
+                                Уже есть аккаунт? 
+                                <span onClick={() => setHasAccount(!hasAccount)}>Войдите</span>
                             </p>
                         </>
                     )}

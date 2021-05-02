@@ -68,12 +68,14 @@ function Createevents(props) {
                         onChange={changeHandler}
                         />
                     </Form.Group>
-                    <Button variant="success" type="submit">
-                        Сохранить
-                    </Button>
-                    <Button className="ml-4" variant="danger" type="submit">
-                        Отмена
-                    </Button>
+                    <div className="d-flex justify-content-start">
+                        <Button variant="success" type="submit">
+                            Сохранить
+                        </Button>
+                        <Button className="ml-4" variant="danger" type="submit">
+                            Отмена
+                        </Button>
+                    </div>
                 </Form>
             </div>
         </div>
