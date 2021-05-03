@@ -13,7 +13,9 @@ const Login = (props) => {
         hasAccount, 
         setHasAccount, 
         emailError,
-        passwordError
+        passwordError,
+        confirmPassword,
+        setConfirmPassword
     } = props;
 
     return (
@@ -37,11 +39,21 @@ const Login = (props) => {
                     autoFocus 
                     required 
                     placeholder="Введите пароль"
-                    autocomplete="password" 
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <p className="errorMsg">{passwordError}</p>
+                <label>Подтвердите пароль</label>
+                <input 
+                    type="password" 
+                    autoFocus 
+                    required 
+                    placeholder="Введите пароль ещё раз"
+                    value={confirmPassword}
+                    onChange={
+                        (e) => setConfirmPassword(e.target.value)
+                    }
+                />
                 <div className="btnContainer">
                     {hasAccount ? (
                         <>

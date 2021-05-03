@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TheEvents(event) {
+function TheEvents({event}) {
     return (
         <div>
              <div className="event-card">
