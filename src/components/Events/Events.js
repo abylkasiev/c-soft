@@ -9,6 +9,14 @@ class Events extends React.Component {
     results: [],
   };
 
+  handleDeleteElement = (id) => {
+    axios.delete(`/events/${id}.json`).then(() => {
+      this.setState((prevState) => ({
+        results: prevState.results.filter((event) => event.id != id),
+      }));
+    });
+  };
+
   componentDidMount() {
     axios.get("/events.json").then((response) => {
       const fetchedResults = [];
@@ -35,10 +43,16 @@ class Events extends React.Component {
             <div className="event-cards">
               {this.state.results.length > 0 ? (
                 this.state.results.map((event) => {
-                  return <TheEvents key={event.id} event={event} />;
+                  return (
+                    <TheEvents
+                      key={event.id}
+                      event={event}
+                      remove={() => this.handleDeleteElement(event.id)}
+                    />
+                  );
                 })
               ) : (
-                <h3>Нет мероприятий</h3>
+                <h3 className="no-events-title">Нет мероприятий</h3>
               )}
             </div>
           </div>

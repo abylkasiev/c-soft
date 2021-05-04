@@ -6,6 +6,7 @@ import { Button, Form } from 'react-bootstrap';
 function Createevents(props) {
     const [event, setEvent] = useState({
         name: '',
+        info: '',
         startTime: '',
         endTime: ''
     });
@@ -51,7 +52,16 @@ function Createevents(props) {
                         onChange={changeHandler}
                         />
                     </Form.Group>
-
+                    <Form.Group controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Подробная информация</Form.Label>
+                        <Form.Control 
+                            as="textarea" 
+                            rows={3} 
+                            name="info"
+                            placeholder="Введите текст"
+                            onChange={changeHandler}
+                        />
+                    </Form.Group>
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Срок начала мероприятия</Form.Label>
                         <Form.Control 

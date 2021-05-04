@@ -1,0 +1,16 @@
+.event-card{
+    margin-top: 5rem;
+    border: 2px solid #d1d1d1;
+    border-radius: 8px;
+}
+.event-name{
+    font-weight: bold;
+    font-size: 2rem;
+    display: flex;
+    margin: 0;
+    padding-top: 1rem;
+    padding-left: 10px;
+}
+.remove{
+    width: 100px;
+}
