@@ -52,10 +52,10 @@ function Header() {
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    <div className="language ml-5">
+                    <div className="language">
                         <form className="d-flex align-items-center justify-content-center">
                             <label className="mb-0 text-black-50 mr-1">Язык</label>
-                            <select className="text-black-50">
+                            <select className="text-black-50 lang-select">
                                 <option value="kg" className="text-black-50">kg</option>
                                 <option value="ru" className="text-black-50">ru</option>
                                 <option value="uz" className="text-black-50">uz</option>
@@ -63,7 +63,7 @@ function Header() {
                         </form>
                     </div>
                     <div className="logout">
-                        <button className="btn btn-danger" onClick={handleLogout}>Выйти</button>
+                        <button className="btn btn-danger logout" onClick={handleLogout}>Выйти</button>
                     </div>
                 </div>
             </div>

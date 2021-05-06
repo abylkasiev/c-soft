@@ -24,11 +24,24 @@ class Events extends React.Component {
         fetchedResults.unshift({
           ...response.data[key],
           id: key,
+          collapse: false,
         });
       }
       this.setState({ results: fetchedResults });
     });
   }
+
+  collapseToggle = (id) => {
+    const index = this.state.results.findIndex((item) => item.id === id);
+    const results = [...this.state.results];
+    const item = { ...this.state.results[index] };
+
+    item.collapse = !item.collapse;
+
+    results[index] = item;
+
+    this.setState({ results });
+  };
 
   render() {
     return (
@@ -48,6 +61,7 @@ class Events extends React.Component {
                       key={event.id}
                       event={event}
                       remove={() => this.handleDeleteElement(event.id)}
+                      collapse={() => this.collapseToggle(event.id)}
                     />
                   );
                 })

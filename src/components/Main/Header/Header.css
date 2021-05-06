@@ -45,7 +45,6 @@
 .dropdown-toggle.nav-link {
   padding-left: 1.5rem;
 }
-
 @media screen and (max-width: 992px) {
   .container {
     max-width: 100%;
@@ -54,7 +53,7 @@
   .headering {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    position: relative;
   }
   .menu {
     display: flex;
@@ -64,5 +63,17 @@
   }
   .btn-primary {
     margin: 20px 0;
+  }
+  .language{
+    margin-top: .5rem;
+  }
+  .logout{
+    margin-top: .5rem;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .login .loginContainer{
+    padding: 20px !important;
   }
 }

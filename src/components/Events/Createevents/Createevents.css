@@ -1,1 +1,9 @@
+.create-event-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.create-event-error-title{
+    color: red;
+}
 

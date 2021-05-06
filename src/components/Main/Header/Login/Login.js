@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css'
 
 const Login = (props) => {
     
@@ -14,26 +15,24 @@ const Login = (props) => {
         setHasAccount, 
         emailError,
         passwordError,
-        confirmPassword,
-        setConfirmPassword
     } = props;
 
     return (
         <section className="login">
             <div className="loginContainer">
                 <h2 className="auth-title"></h2>
-                <label>Почта</label>
+                <label className="label-form">Почта</label>
                 <input 
                     type="text" 
                     autoFocus 
                     required 
                     value={email}
-                    autocomplete="email" 
+                    autoComplete="email" 
                     placeholder="Электронный адрес"
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <p className="errorMsg">{emailError}</p>
-                <label>Пароль</label>
+                <label className="label-form">Пароль</label>
                 <input 
                     type="password" 
                     autoFocus 
@@ -43,17 +42,6 @@ const Login = (props) => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <p className="errorMsg">{passwordError}</p>
-                <label>Подтвердите пароль</label>
-                <input 
-                    type="password" 
-                    autoFocus 
-                    required 
-                    placeholder="Введите пароль ещё раз"
-                    value={confirmPassword}
-                    onChange={
-                        (e) => setConfirmPassword(e.target.value)
-                    }
-                />
                 <div className="btnContainer">
                     {hasAccount ? (
                         <>

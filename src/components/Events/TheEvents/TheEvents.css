@@ -14,3 +14,26 @@
 .remove{
     width: 100px;
 }
+.read-more{
+    width: 150px;
+    margin-right: 1rem;
+    margin-left: .5rem;
+}
+.info-content{
+    padding: 0 15px;
+    max-height: 0px;
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to bottom, #000, #000, rgba(0, 0, 0, .2));
+}
+.info-content.show {
+    max-height: 1000px;
+    transition: 2s;
+    color: #000;
+}
+.info-content.less {
+    transition: .5s;
+}

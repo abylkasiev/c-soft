@@ -38,8 +38,8 @@ button:hover {
   padding: 60px;
   margin: auto;
   width: 100%;
-  max-width: 520px;
-  min-height: 600px;
+  max-width: 420px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
