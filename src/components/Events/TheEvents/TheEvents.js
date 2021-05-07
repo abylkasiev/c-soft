@@ -13,7 +13,7 @@ function TheEvents({ event, remove, collapse }) {
           <p className="event-time">
             Дата: {event.startTime} / {event.endTime}
           </p>
-          <p className="status">Статус: {event.status}</p>
+          <p>Статус: <span className="status">{event.status}</span></p>
         </div>
         <Button className="btn btn-primary read-more" onClick={collapse}>
           Подробнее

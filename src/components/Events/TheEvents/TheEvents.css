@@ -2,6 +2,7 @@
     margin-top: 5rem;
     border: 2px solid #d1d1d1;
     border-radius: 8px;
+    padding-bottom: .5rem;
 }
 .event-name{
     font-weight: bold;
@@ -13,11 +14,14 @@
 }
 .remove{
     width: 100px;
+    margin-bottom: 0;
+
 }
 .read-more{
     width: 150px;
     margin-right: 1rem;
     margin-left: .5rem;
+    margin-bottom: 0;
 }
 .info-content{
     padding: 0 15px;
@@ -36,4 +40,7 @@
 }
 .info-content.less {
     transition: .5s;
+}
+.status{
+    color: green;
 }
